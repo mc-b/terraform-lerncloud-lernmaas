@@ -71,6 +71,7 @@ variable "key" {
 variable "vpn" {
     description = "Optional VPN welches eingerichtet werden soll"
     type    = string
+    default = "default"
 }
 
 # Scripts
