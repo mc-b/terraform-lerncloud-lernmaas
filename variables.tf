@@ -23,7 +23,7 @@ variable "description" {
 variable "vm_per_host" {
   description = "Anzahl VMs welche pro VM Host angelegt werden sollen"
   type        = number
-  default     = 4
+  default     = 1
 }
 
 variable "vm_offset" {

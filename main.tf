@@ -8,7 +8,7 @@ locals {
   # Diese Schleife erstellt für jeden Typ so viele Einträge, wie in der Data Source angegeben
   expanded_machines = flatten([
     for machine_type, machine in var.machines : [
-      for i in range(length(data.maas_vm_hosts.vm-hosts.no)) : {
+      for i in range(length(data.maas_vm_hosts.vm-hosts.no) * var.vm_per_host) : {
         type        = machine_type
         index       = i + 1
         hostname    = machine.hostname
