@@ -56,12 +56,6 @@ variable "ports" {
   default     = [22, 80]
 }
 
-# Verarbeiten der userdata-Datei im Modul
-data "template_file" "userdata" {
-  for_each = { for idx, vm in local.expanded_machines : "${vm.type}-${vm.index}" => vm }
-  template = file(each.value.userdata)
-}
-
 # Zugriffs Informationen
 
 variable "url" {
