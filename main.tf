@@ -34,6 +34,6 @@ resource "maas_vm_instance" "vm" {
   memory      = each.value.memory * 1024
   storage     = each.value.storage
 
-  user_data = each.value.userdata["${each.value.type}-${each.value.index}"]
+  user_data = each.value.userdata
   zone      = var.vpn
 }
