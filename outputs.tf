@@ -21,6 +21,11 @@ output "fqdn_vm" {
   description = "The FQDN of the server instance."
 }
 
+output "fqdn_private" {
+  value       = { for key, vm in maas_vm_instance.vm : key => "${vm.hostname}.maas" }
+  description = "The FQDN of the server instance."
+}
+
 output "description" {
   value       = { for key, machine in var.machines : key => machine.description }
   description = "Description of each VM."
