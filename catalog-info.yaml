@@ -1,0 +1,24 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: terraform-lerncloud-lernmaas
+  namespace: mc-b
+  description: Terraform Modul lernMAAS. Legt VMs fuer ganze Klassen auf MAAS.io an.
+  tags:
+  - terraform
+  - lerncloud
+  - opentofu  
+  links:
+  - url: https://github.com/mc-b/terraform-lerncloud-lernmaas
+    title: Repository
+    icon: github
+  annotations:
+    github.com/project-slug: mc-b/terraform-lerncloud-lernmaas
+    backstage.io/source-location: url:https://github.com/mc-b/terraform-lerncloud-lernmaas
+    # backstage.io/techdocs-ref: url:https://github.com/mc-b/terraform-lerncloud-lernmaas
+spec:
+  type: infrastructure
+  lifecycle: production
+  owner: group:mc-b/mc-b
+  dependsOn:
+    - component:mc-b/lerncloud     
