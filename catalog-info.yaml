@@ -8,6 +8,8 @@ metadata:
   - terraform
   - lerncloud
   - opentofu  
+  - maas.io
+  - lernmaas
   links:
   - url: https://github.com/mc-b/terraform-lerncloud-lernmaas
     title: Repository
@@ -20,5 +22,5 @@ spec:
   type: infrastructure
   lifecycle: production
   owner: group:mc-b/mc-b
-  dependsOn:
-    - component:mc-b/lerncloud     
+  subcomponentOf: component:mc-b/terraform-provider-lerncloud
+ 
