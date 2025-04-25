@@ -8,7 +8,7 @@ metadata:
   - terraform
   - lerncloud
   - opentofu  
-  - maas.io
+  - maas
   - lernmaas
   links:
   - url: https://github.com/mc-b/terraform-lerncloud-lernmaas
