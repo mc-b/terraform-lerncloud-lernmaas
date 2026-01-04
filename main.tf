@@ -28,7 +28,7 @@ resource "maas_vm_instance" "vm" {
 
   kvm_no = data.maas_vm_hosts.vm-hosts.no[each.value.index % length(data.maas_vm_hosts.vm-hosts.no)]
 
-  hostname    = "${each.value.hostname}-${format("%02d", each.value.index)}"
+  hostname    = "${each.value.hostname}-${format("%02d", each.value.index + 10)}"
   description = each.value.description
   cpu_count   = each.value.cores
   memory      = each.value.memory * 1024
