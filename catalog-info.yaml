@@ -20,7 +20,7 @@ metadata:
     # backstage.io/techdocs-ref: url:https://github.com/mc-b/terraform-lerncloud-lernmaas
 spec:
   type: library
-  lifecycle: production
+  lifecycle: deprecated
   owner: group:mc-b/mc-b
   dependencyOf: component:mc-b/terraform-provider-lerncloud
  
